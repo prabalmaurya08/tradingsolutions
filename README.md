@@ -1,104 +1,133 @@
-# tradingsolutions
-# Trading Solutions - Flutter Developer Task
+# Trading Solutions – Flutter Developer
 
-A new Flutter project.
-> A feature-rich trading application prototype built with Flutter. This project was developed as a technical assessment for a Flutter Developer role, showcasing skills in complex UI/UX, animations, custom widget development, and state management.
+This project is a Zerodha clone built with Flutter, showcasing a modern, responsive, and feature-rich trading application prototype. It replicates Zerodha’s core trading and portfolio management workflows and interactive charting tools using Flutter’s UI capabilities and the Syncfusion charting package. The focus is on UI fidelity, smooth navigation, and reusable widget architecture.
 
-## Getting Started
-## 📸 Screenshots & Demos
+---
 
-This project is a starting point for a Flutter application.
-A quick demonstration of the app's core functionality, including the animated top-sheet, stock details view, and interactive charts.
+## 📱 App Screenshots & Demo
 
-A few resources to get you started if this is your first Flutter project:
-*(Here you would embed a GIF or video of the app in action)*
+| Splash Screen   |
+| :-------------: |
+| ![Splash Screen](assets/screenshots/logo.jpeg) |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-`!App Demo GIF`
+| Home Screen     | Stock Details   | Interactive Chart |
+| :-------------: | :-------------: | :---------------: |
+| ![Home](assets/screenshots/watchlist.jpeg) | ![Details](assets/screenshots/stock.jpeg) | ![Chart](assets/screenshots/trading1.jpeg) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# tradingsolutions
-| Home Screen | Stock Details | Interactive Chart |
-| :---: | :---: | :---: |
-| `!Home Screen` | `!Stock Details` | `!Chart Screen` |
+| TopBar       | Portfolio       | Profile         | Orders          |
+| :-------------: | :-------------: | :-------------: | :-------------: |
+| ![Wishlist](assets/screenshots/topbar.jpeg) | ![Portfolio](assets/screenshots/holdings.jpeg) | ![Profile](assets/screenshots/profile.png) | ![Orders](assets/screenshots/order.jpeg) |
+
+| Bids            | Chart Layout    | Order Placement Sidebar |
+| :-------------: | :-------------: | :---------------------: |
+| ![Bids](assets/screenshots/bid.jpeg) | ![ChartLayout](assets/screenshots/trading2.jpeg) | ![OrderPlacement](assets/screenshots/orderplacement.jpeg) |
 
 
-## ✨ Features
 
-This application simulates a real-world trading platform with a focus on a clean, responsive, and intuitive user experience.
+## 🌟 Features
 
-### Core UI & Navigation
--   **Animated Splash Screen**: An engaging entry point with a subtle scaling logo animation.
--   **Dashboard (Home Screen)**:
-    -   **Market Overview AppBar**: A custom `AppBar` displaying scrollable real-time market indices (e.g., NIFTY 50, NIFTY BANK).
-    -   **Animated Top Sheet**: A slide-down panel providing a quick overview of market trends and funds. It blurs the background content when active for better focus.
-    -   **Bottom Navigation**: Intuitive `BottomNavigationBar` for easy access to Watchlist, Orders, Portfolio, Bids, and Profile.
--   **Search & Discovery**:
-    -   A dedicated search screen with a focused text field for finding stocks.
-    -   A `CustomTabbedView` to filter search results by categories like Stocks, IPOs, Mutual Funds, etc.
+**Core UI & Navigation**
+- Animated Splash Screen with scaling logo
+- Dashboard (Home Screen) with custom `AppBar` showing market indices
+- Slide-down Animated Top Sheet with background blur for focus
+- Bottom NavigationBar for easy access to Watchlist, Orders, Portfolio, Bids, Profile
+- Dedicated Search screen with custom horizontal tabbed filters (Stocks, IPOs, Mutual Funds)
 
-### Stock & Trading Features
--   **Draggable Stock Details Sheet**: An interactive and scrollable bottom sheet (`DraggableScrollableSheet`) that provides comprehensive information about a selected stock. It can be expanded from a partial view to a full-screen view.
--   **Interactive Trading Charts**: A full-fledged chart screen built with `syncfusion_flutter_charts` supporting:
-    -   Multiple chart types (Line, Candlestick, Area).
-    -   Various time frames (1D, 1W, 1M, etc.).
-    -   Technical indicators like EMA, SMA, and Bollinger Bands.
-    -   Zooming, panning, and trackball for detailed analysis.
--   **Order Placement**:
-    -   Dedicated screens for placing BUY and SELL orders.
-    -   **Swipe-to-Confirm Button**: A custom, gesture-based confirmation widget to prevent accidental orders.
+**Stock & Trading Features**
+- Draggable and expandable Stock Details Bottom Sheet
+- Interactive, fully-featured financial charts using `syncfusion_flutter_charts`
+  - Line, Candlestick, Area charts
+  - Multiple time frames, technical indicators (EMA, SMA, Bollinger Bands)
+  - Zoom, pan, trackball functionality
+- BUY/SELL order placement screens with custom swipe-to-confirm button preventing accidental actions
 
-### Custom Widgets & Components
-The project is built with a strong emphasis on creating reusable and modular widgets.
--   `MarketAppBar`: A custom app bar implementation.
--   `CustomTabbedView`: A stateful widget for creating horizontally scrollable tabs with an animated indicator.
--   `SwipeToConfirmButton`: A self-contained, animated swipe button for critical actions.
--   `StockDetailsSheet`: A complex, reusable bottom sheet that aggregates multiple data points and actions for a stock.
--   Various custom cards for displaying data consistently: `CompanyCard`, `InvestmentCard`, `HoldingCard`, `OrderItemCard`.
+**Custom Widgets & Components**
+- `MarketAppBar`, `CustomTabbedView`, `SwipeToConfirmButton`, `StockDetailsSheet`
+- Reusable card widgets like: `CompanyCard`, `InvestmentCard`, `HoldingCard`, `OrderItemCard`
+- Modular, single-responsibility widgets composing the UI effectively
+
+---
 
 ## 🛠️ Tech Stack & Architecture
 
--   **Framework**: Flutter
--   **Language**: Dart
--   **State Management**: `StatefulWidget` with `setState()`. Chosen for its simplicity and suitability for a focused technical assessment. The architecture is designed to be scalable for more advanced state management solutions like BLoC or Riverpod.
--   **Key Packages**:
-    -   `syncfusion_flutter_charts`: For powerful and interactive financial charts.
--   **Architecture**:
-    -   **Widget-based Composition**: The UI is broken down into small, single-responsibility widgets, promoting reusability and maintainability.
-    -   **Separation of Concerns**: The project is structured by features (`screens`) and shared components (`widgets`), making the codebase easy to navigate.
-    -   **Data-Driven UI**: Widgets are designed to be driven by the data passed to them, making them predictable and easy to test.
+- **Framework:** Flutter (Dart)
+- **State Management:** `StatefulWidget` with `setState()` (simple and suitable for technical assessment; scalable to BLoC or Riverpod)
+- **Key Packages:** `syncfusion_flutter_charts`
+- **Architecture:** Widget-based composition, separation into `screens` and `widgets`, data-driven UI designed for maintainability
 
-## 🚀 Getting Started
+---
 
-To run this project locally, follow these steps:
+## 🚀 Setup Instructions
 
-1.  **Prerequisites**:
-    -   Ensure you have the Flutter SDK installed.
-    -   An IDE like VS Code or Android Studio with the Flutter plugin.
+1. **Prerequisites:**
+   - Install [Flutter SDK](https://docs.flutter.dev/get-started/install)
+   - Use an IDE like VS Code or Android Studio with Flutter plugin installed
+   
+2. **Clone the repository:**
 
-2.  **Clone the repository**:
-    ```sh
-    git clone https://github.com/your-username/tradingsolutions.git
+    ```
+    git clone https://github.com/prabalmaurya08/tradingsolutions.git
     cd tradingsolutions
     ```
 
-3.  **Install dependencies**:
-    ```sh
+3. **Install dependencies:**
+
+    ```
     flutter pub get
     ```
 
-4.  **Run the app**:
-    ```sh
+4. **Run the app on an emulator or physical device:**
+
+    ```
     flutter run
     ```
 
-## 💡 Potential Future Improvements
+5. **(Optional) Build release APK:**
 
--   **Integrate a State Management Solution**: Refactor to use a more robust state management library like `flutter_bloc` or `riverpod` to handle complex app state and data flow.
--   **API Integration**: Replace mock data with live data from a financial market API.
--   **Add User Authentication**: Implement a login/signup flow.
--   **Unit & Widget Testing**: Write tests to ensure the reliability and correctness of business logic and UI components.
--   **Theming**: Implement a robust theming system with support for both light and dark modes.
+    ```
+    flutter build apk --release
+    ```
+
+---
+
+## 🗂️ Folder Structure
+
+lib/
+├── main.dart # Entry point
+├── screens/ # Feature screens (Home, StockDetails, Charts, etc.)
+├── widgets/ # Reusable UI components
+├── models/ # Data models
+├── utils/ # Helpers, constants
+assets/
+├── images/
+├── icons/
+└── fonts/
+
+text
+
+---
+
+## 💡 Potential Future Enhancements
+
+- Implement advanced state management (e.g., `flutter_bloc`, `riverpod`) for better scalability
+- Integrate real-market data APIs for live updates
+- Add user authentication (login/signup)
+- Write unit & widget tests
+- Advanced theming support (light/dark mode)
+
+---
+
+## 📦 Deliverables
+
+- **GitHub Repository:** https://github.com/prabalmaurya08/tradingsolutions
+
+
+---
+
+## 👤 Developer
+
+**Name:** Prabal  
+**Role:** Flutter Developer   
+**Date:** November 2025
+
+---
